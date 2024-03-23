@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extremely Professional Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="hero">
+        <h1>Do not be Afraid</h1>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="cta-button">Discover</a>
+
+        <button id="feedbackBtn" class="feedback-btn">Feedback</button>
+
+        <!-- Modal -->
+        <div id="typeformModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <iframe id="typeform-full" frameborder="0" src="https://o23c212abwb.typeform.com/to/Fn1WkexU"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="items">
+        <h2>Gems</h2>
+        <div class="list">
+            <div class="item">
+                <iframe src="https://www.youtube.com/embed/W-etaun8Teo?si=pg-ASct0BFbKFE6w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p> Woo woo</p>
+            </div>
+            <div class="item">
+                <iframe src="https://www.youtube.com/embed/fc7A6XIF2t8?si=sU4GypyOhc87w0go" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Explosion!</p>
+            </div>
+            <div class="item">
+                <iframe src="https://www.youtube.com/embed/E24Q43ALCoI?si=za05kJfK6H164c6u" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Cat</p>
+            </div>
+            </div>
+    </section>
+
+    <!-- Add additional sections here -->
+
+    <footer>
+        <!-- Footer content here -->
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var btn = document.getElementById('feedbackBtn');
+            var modal = document.getElementById('typeformModal');
+            var closeBtn = document.querySelector('.close'); // Assuming there's only one .close in your modal
+
+            console.log('Document loaded.');
+
+            btn.addEventListener('click', function () {
+                console.log('Button clicked.');
+                modal.style.display = 'block';
+            });
+
+            closeBtn.addEventListener('click', function () {
+                console.log('Close clicked.');
+                modal.style.display = 'none';
+            });
+
+            window.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    console.log('Outside modal clicked.');
+                    modal.style.display = 'none';
+                }
+            });
+        });
+
+    </script>
+
+</body>
+</html>

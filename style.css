@@ -1,0 +1,174 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #31363F;
+    color: #FFEDD8;
+}
+
+
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-image: url('images/banner.gif');
+    background-size: cover;
+    background-position: -150px -130px;
+    text-align: center;
+    color: white;
+}
+
+    .hero h1 {
+        font-size: 5em;
+    }
+
+    .hero p {
+        font-size: 2em;
+    }
+
+    .h2 {
+        font-size: 3em;
+    }
+
+.cta-button {
+    background-color: #76ABAE;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0.3em;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+    .cta-button:hover {
+        background-color: #50727B;
+    }
+
+.items {
+    padding: 2em;
+    text-align: center;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.item {
+    flex: 1;
+    padding: 1em;
+    background-color: #891652;
+    border-radius: 0.3em;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+    .item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+    }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .list {
+        flex-direction: column;
+    }
+}
+
+.feedback-btn {
+    margin-top: 10px;
+    background-color: #31363F;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0.3em;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+    .feedback-btn:hover {
+        background-color: #222831;
+    }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    align-items: flex-start;
+    position: fixed;
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100vw; /* 100% of the viewport width */
+    height: 100vh; /* 100% of the viewport height */
+    justify-content: center; /* Center horizontally */
+    top: 0;
+
+}
+
+
+.modal-content {
+    position: relative; /* This is needed to position the .close button absolutely relative to this container */
+    background-color: #fefefe;
+    margin: 15% auto; /* Adjust as necessary */
+    border: 1px solid #888;
+    width: 60vw; /* Adjust as necessary */
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    min-height: 50vh; /* Adjust as necessary */
+}
+
+.modal-content iframe {
+    width: 100%; /* Full width of the .modal-content */
+    min-height: 200px; /* Or any other height that accommodates your form well */
+    height: 50vh; /* Adjust based on preference, vh ensures it's responsive to viewport height */
+}
+
+
+.close {
+    position: absolute;
+    top: 10px; /* Adjust as necessary */
+    right: 10px; /* Adjust as necessary */
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        width: 90vw; /* Increase the width on smaller screens */
+        min-height: 90vh; /* Increase the height on smaller screens */
+    }
+
+        .modal-content iframe {
+            min-height: 90vh; /* Ensure the iframe is also taller on smaller screens */
+        }
+}
+
+
